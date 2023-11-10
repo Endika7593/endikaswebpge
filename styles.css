@@ -1,0 +1,1228 @@
+
+@font-face {
+    font-family:"cooper-black-regular";
+    src:url("https://www.dafontfree.net/data/24/c/119618/COOPBL.ttf") format("woff"),
+    url("https://www.dafontfree.net/data/24/c/119618/COOPBL.ttf") format("opentype"),
+    url("https://www.dafontfree.net/data/24/c/119618/COOPBL.ttf") format("truetype");
+}
+
+.titulo {
+    font-family: coper-black;
+    text-align: center;
+    font-size: 75px;
+}
+
+
+
+@keyframes move-izq {
+    0% {
+    }
+    100% {
+      transform: translateX(-100em);
+    }
+  }
+  @keyframes move-der {
+    0% {
+    }
+    100% {
+      transform: translateX(100em);
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cooper-Black";
+    user-select: none;
+  }
+  @font-face {
+    font-family: Cooper-Black;
+    src: url("/assets/COOPBL.ttf");
+  }
+  
+  body {
+    background-color: #78bbcb;
+  }
+  
+  .title {
+    display: block;
+    margin: 2% auto 40px;
+    text-align: center;
+    font-size: 75px;
+  }
+  
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    height: 71vh;
+  }
+  
+  .div1 {
+    grid-area: 1 / 3 / 6 / 4;
+    margin: 0 5rem;
+  }
+  .div2 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div4 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .div5 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .div6 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .div7 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .div8 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  .div9 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .div10 {
+    grid-area: 5 / 5 / 6 / 6;
+  }
+  .div11 {
+    grid-area: 4 / 4 / 5 / 5;
+  }
+  .div12 {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+  .div13 {
+    grid-area: 3 / 5 / 4 / 6;
+  }
+  .div14 {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+  .div15 {
+    grid-area: 1 / 5 / 2 / 6;
+  }
+  
+  .parent div {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .cortina {
+    position: fixed;
+    width: 50vw;
+    height: 100vh;
+    top: 0;
+  
+    background: linear-gradient(
+      to right,
+      #b62a17 0%,
+      #b62a17 6%,
+      #6d0019 10%,
+      #b62a17 14%,
+      #b62a17 20%,
+      #6d0019 24%,
+      #b62a17 28%,
+      #b62a17 34%,
+      #6d0019 38%,
+      #b62a17 42%,
+      #b62a17 48%,
+      #6d0019 52%,
+      #b62a17 56%,
+      #b62a17 62%,
+      #6d0019 66%,
+      #b62a17 70%,
+      #b62a17 76%,
+      #6d0019 80%,
+      #b62a17 84%,
+      #b62a17 90%,
+      #6d0019 94%,
+      #b62a17 98%
+    );
+    z-index: 5;
+  }
+  
+  .cortina-der {
+    left: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    animation: move-der 3s 1.5s;
+    animation-fill-mode: forwards;
+  }
+  .cortina-izq {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    transition: 0.5s;
+    animation: move-izq 3s 1.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .cortina-izq h1 {
+    position: relative;
+    top: 35%;
+    left: 7em;
+    font-size: 95px;
+    color: white;
+    -webkit-text-stroke: 4px black;
+  }
+  .cortina-der h1 {
+    position: relative;
+    top: 35%;
+    right: 7em;
+    font-size: 95px;
+    color: white;
+    -webkit-text-stroke: 4px black;
+  }
+  
+  a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 4em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: cornflowerblue;
+    transition: 0.2s;
+  }
+  a:hover {
+    transition: 0.2s;
+    text-decoration: underline;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 3%;
+    cursor: pointer;
+  }
+  
+  button img {
+    width: 30px;
+  }
+  
+  .muted:hover {
+    transition: 0.2s;
+    transform: scale(1.3);
+  }
+  
+  .parent-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 750px) {
+    .title {
+      font-size: 50px;
+      width: 70%;
+    
+    }
+    .parent {
+      display: none;
+    }
+    .parent-mobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .div1-mobile {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+    }
+  
+    .div-mobile {
+      display: flex;
+    }
+  
+    button {
+      bottom: -10px;
+    }
+  
+    .cortina-izq img {
+      max-width: 185px;
+    }
+    .cortina-der img {
+      max-width: 185px;
+    }
+  
+  }
+
+  .controlsOverlay[hidetoggle="true"].hovering > .pip-wrapper:not(.hovering) {
+    /* If this isn't !important, it will fail to override the other opacity
+     * rules, which are currently defined below this point in this file. */
+    opacity: 0 !important;
+  }
+  
+  .pip-wrapper {
+    position: absolute;
+    cursor: pointer;
+    -moz-appearance: none;
+    background: none;
+    color: inherit;
+    border: none;
+    text-align: unset;
+    top: calc(70% - 40px);
+    opacity: 0;
+    padding-inline: 0;
+    transition: opacity 200ms;
+    --pip-icon-size: 24px;
+    --pip-icon-width-with-margins: calc(2 * var(--pip-toggle-margin) + var(--pip-icon-size));
+    --pip-highlight-style: solid rgba(0, 254, 255, 1);
+    --pip-highlight-width: 2px;
+    --pip-toggle-distanceFromVideoEdge: 18px;
+    --pip-toggle-focus-outline-offset: 1px;
+    --pip-toggle-margin: 8px;
+    --pip-border-radius-toggle: 4px;
+    --pip-box-shadow-default: 0 0 4px rgba(255, 255, 255, 0.9);
+    --pip-box-shadow-hover: 0 0 10px rgba(255, 255, 255, 0.7);
+    --pip-expanded-height: 40px;
+    --pip-expanded-min-width: 200px;
+    --pip-expanded-max-width: max-content;
+  }
+  
+  /* Adjust sizing of the regular toggle wrapper to correctly show the
+   * focus outline when navigating via keyboard. */
+  .pip-wrapper[has-used],
+  .pip-wrapper[small-video] {
+    height: var(--pip-icon-width-with-margins);
+    width: var(--pip-icon-width-with-margins);
+    border-radius: var(--pip-border-radius-toggle);
+    margin-right: calc(var(--pip-icon-width-with-margins) * -1);
+  }
+  
+  .pip-wrapper[policy="hidden"] {
+    display: none;
+  }
+  
+  .pip-wrapper[policy="top"] {
+    top: 0%;
+    translate: var(--pip-toggle-translate-x);
+  }
+  
+  .pip-wrapper[policy="one-quarter"] {
+    top: 25%;
+  }
+  
+  .pip-wrapper[policy="middle"] {
+    top: 50%;
+  }
+  
+  .pip-wrapper[policy="three-quarters"] {
+    top: 75%;
+  }
+  
+  .pip-wrapper[policy="bottom"] {
+    top: 100%;
+    translate: var(--pip-toggle-translate-x) -100%;
+  }
+  
+  .pip-wrapper[medium-video] > .pip-expanded > .pip-icon-label > .pip-label {
+    font-size: 13px;
+  }
+  
+  .pip-wrapper[medium-video] > .pip-expanded {
+    font-size: 11px;
+  }
+  
+  .pip-wrapper[position="right"] {
+    /* move from the right by total width of pip toggle so that it is at least visible in the video element */
+    right: calc(var(--pip-icon-width-with-margins) + var(--pip-toggle-distanceFromVideoEdge));
+  }
+  
+  /* Re-position the first-time toggle such that it will always be the same distance away from the right edge
+   * of the video, even if the label and/or message string(s) are long. */
+  .pip-wrapper[position="right"] > .pip-expanded {
+    translate: calc(-100% + var(--pip-icon-width-with-margins));
+    transform-origin: right;
+  }
+  
+  .pip-wrapper[position="left"] {
+    left: var(--pip-toggle-distanceFromVideoEdge);
+  }
+  
+  .pip-expanded,
+  .pip-small,
+  .pip-icon,
+  .pip-explainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .pip-wrapper > .pip-expanded {
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    scale: 0.33 1;
+    font-size: 14px;
+  }
+  
+  .pip-wrapper:not([small-video], [has-used]) > .pip-small {
+    opacity: 0;
+    transition: opacity 200ms;
+  }
+  
+  .pip-wrapper:not([small-video], [has-used]) > .pip-expanded {
+    opacity: 1;
+    scale: 1;
+    pointer-events: none;
+  }
+  
+  .pip-wrapper:not([small-video], [has-used]).hovering > .pip-expanded {
+    pointer-events: auto;
+  }
+  
+  .pip-icon {
+    top: 8px;
+    left: 8px;
+    pointer-events: none;
+    background-image: url("chrome://global/skin/media/picture-in-picture-open.svg");
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: var(--pip-icon-size) var(--pip-icon-size);
+    -moz-context-properties: fill;
+    fill: currentColor;
+    height: var(--pip-icon-size);
+    width: var(--pip-icon-size);
+  }
+  
+  .videocontrols[localedir="rtl"] .pip-icon {
+    transform: scaleX(-1);
+  }
+  
+  .pip-wrapper[position="left"] > .pip-expanded > .pip-icon-label > .pip-label {
+    margin-left: var(--pip-icon-width-with-margins);
+    margin-right: var(--pip-toggle-margin);
+  }
+  
+  .pip-small {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .pip-wrapper[position="left"] > .pip-expanded > .pip-icon-label > .pip-icon {
+    display: none;
+  }
+  
+  .pip-wrapper:is([small-video], [has-used]) > .pip-expanded,
+  .pip-wrapper[position="right"]:not([small-video], [has-used]) > .pip-icon {
+    display: none;
+  }
+  
+  .pip-wrapper[position="right"] > .pip-expanded > .pip-icon-label > .pip-icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+  }
+  
+  .pip-wrapper[position="right"] > .pip-expanded > .pip-icon-label {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+  
+  .pip-wrapper[position="right"] > .pip-expanded > .pip-icon-label > .pip-icon,
+  .pip-wrapper[position="right"] > .pip-expanded > .pip-icon-label > .pip-label {
+    margin-block: auto;
+  }
+  
+  .pip-wrapper[position="right"] > .pip-expanded > .pip-icon-label > .pip-icon {
+    margin-inline: var(--pip-toggle-margin);
+  }
+  
+  .pip-wrapper[position="right"] > .pip-expanded > .pip-icon-label > .pip-label {
+    margin-right: var(--pip-toggle-margin);
+  }
+  
+  @media (prefers-reduced-motion) {
+    .pip-wrapper,
+    .pip-expanded,
+    .pip-small,
+    .pip-explainer {
+      /* Transition changes in other rules may override this one if reduced motion is preferred.
+       * Make sure this one always takes priority. */
+      transition: none !important;
+    }
+  }
+  
+  
+  /* NO EXPERIMENT - PIP STYLING */
+  
+  .controlsOverlay:not(.experiment).hovering > .pip-wrapper:not(:focus-visible) {
+    opacity: 0.8;
+  }
+  
+  .controlsOverlay:not(.experiment).hovering > .pip-wrapper.hovering {
+    opacity: 1;
+  }
+  
+  /* If the PiP toggle is keyboard focused, always show it at 100% opacity */
+  .pip-wrapper:not([policy="hidden"], .experiment):focus-visible {
+    opacity: 1;
+  }
+  
+  /* If showing the expanded PiP toggle, don't outline the
+   * parent wrapper element - the expanded toggle handles its
+   * own outline. This also affects the regular toggle for small-videos. */
+  .pip-wrapper:not([policy="hidden"], [has-used], .experiment):focus-visible {
+    outline: none;
+  }
+  
+  /* Override outline set by ua.css for the regular toggle. */
+  .pip-wrapper[has-used]:not([policy="hidden"], .experiment):focus-visible {
+    outline: var(--control-focus-outline);
+  }
+  
+  .pip-wrapper:not(.experiment) > .pip-small {
+    background-color: rgba(12, 12, 13, 0.65);
+    box-shadow: 0 4px 4px rgba(12, 12, 13, 0.25);
+    border-radius: var(--pip-border-radius-toggle);
+  }
+  
+  .pip-wrapper:not(.experiment) > .pip-expanded,
+  .pip-wrapper:not(.experiment) > .pip-small {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+  }
+  
+  /* If first-time toggle is visible and then switched to the regular toggle for smaller videos,
+   * maintain the border shown on the first-time toggle. */
+  .pip-wrapper:not([has-used], .experiment) > .pip-small {
+    border: var(--pip-highlight-width) var(--pip-highlight-style);
+  }
+  
+  .pip-wrapper:not(.experiment) > .pip-expanded {
+    border: var(--pip-highlight-width) var(--pip-highlight-style);
+    transition: opacity 250ms, scale 200ms;
+    height: var(--pip-expanded-height);
+    background-color: rgba(12, 12, 13, 0.9);
+    box-shadow: 0 4px 4px rgba(12, 12, 13, 0.25);
+    width: var(--pip-expanded-max-width);
+    min-width: var(--pip-expanded-min-width);
+    border-radius: 8px;
+  }
+  
+  .pip-wrapper:not(.experiment).hovering > .pip-expanded {
+    box-shadow: none;
+    border: var(--pip-highlight-width) var(--pip-highlight-style);
+    /* Remove bottom border but keep text centred with padding. */
+    border-bottom: none;
+    padding-bottom: var(--pip-highlight-width);
+  }
+  
+  .pip-wrapper:not([small-video], [has-used], .experiment).hovering > .pip-expanded {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Toggle message only appears for CONTROL variant. */
+  .pip-wrapper:not(.experiment) > .pip-expanded > .pip-explainer {
+    padding: 6px 16px 8px 8px;
+    translate: 0;
+    transition: opacity 250ms, translate 190ms;
+    transition-timing-function: cubic-bezier(.07, .95, 0, 1);
+    background: rgba(12, 12, 13, 0.65);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: var(--pip-highlight-width) var(--pip-highlight-style);
+    border-top: 0;
+    box-shadow: 0 4px 4px rgba(12, 12, 13, 0.25);
+    opacity: 0;
+    margin-inline: calc(-1 * var(--pip-highlight-width));
+    width: calc(100% - 24px);
+    word-break: break-word;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .videocontrols[localedir="rtl"] .pip-wrapper:not(.experiment) > .pip-explainer {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  .pip-wrapper:not(.experiment).hovering > .pip-expanded > .pip-explainer {
+    pointer-events: auto;
+    opacity: 1;
+    translate: 0 calc(40px - var(--pip-highlight-width));
+  }
+  
+  
+  /* EXPERIMENT ONLY - PIP STYLING */
+  
+  /* Since we change the outline for the first-time PiP toggle VARIANT,
+   * override the focus outline in videocontrols.css as well so that
+   * there is design consistency. */
+  .controlsContainer.experiment {
+    --control-focus-outline: 2px solid #0060DF;
+  }
+  
+  .pip-wrapper.experiment > .pip-expanded > .pip-icon-label > .pip-label {
+    font-size: min(16px, 1.4em);
+  }
+  
+  /* Only the background will be set at 70% opacity. The icons and labels will remain at 100%. */
+  .controlsOverlay.experiment.hovering > .pip-wrapper {
+    opacity: 1;
+  }
+  
+  /* If the PiP toggle is keyboard focused, always show it and override outline set by ua.css.
+   * Opacity only affects the toggle icon and label, not the background, which is handled separately. */
+  .pip-wrapper.experiment:not([policy="hidden"]):focus-visible {
+    opacity: 1;
+    /* Wrapper size won't always match pip-small or pip-expanded, so don't apply outline on wrapper. */
+    outline: none;
+  }
+  
+  /* For the regular PiP toggle, take into consideration small videos and has-used=true. */
+  .pip-wrapper.experiment:is([has-used], [small-video]):not([policy="hidden"]):focus-visible > .pip-small,
+  .pip-wrapper.experiment:not([policy="hidden"], [has-used]):focus-visible > .pip-expanded {
+    outline: var(--control-focus-outline);
+    outline-offset: var(--pip-toggle-focus-outline-offset);
+  }
+  
+  .pip-wrapper.experiment > .pip-expanded > .pip-explainer {
+    display: none;
+  }
+  
+  .pip-wrapper.experiment > .pip-small {
+    border-radius: var(--pip-border-radius-toggle);
+    transition: background-color 200ms;
+  }
+  
+  .pip-wrapper.experiment > .pip-expanded {
+    transition: opacity 250ms, scale 200ms, translate 190ms, background-color 200ms;
+    height: var(--pip-expanded-height);
+    width: var(--pip-expanded-max-width);
+    min-width: var(--pip-expanded-min-width);
+    border-radius: var(--pip-border-radius-toggle);
+  }
+  
+  .pip-wrapper.experiment > .pip-small,
+  .pip-wrapper.experiment > .pip-expanded {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+  }
+  
+  .pip-wrapper.experiment.hovering > .pip-small,
+  .pip-wrapper.experiment.hovering > .pip-expanded {
+    background-color: rgba(0, 0, 0, 1);
+  }
+  
+  .pip-wrapper.experiment:not([policy="hidden"], :focus-visible) > .pip-small,
+  .pip-wrapper.experiment:not([policy="hidden"], :focus-visible) > .pip-expanded {
+    box-shadow: var(--pip-box-shadow-default);
+  }
+  
+  .pip-wrapper.experiment:not([policy="hidden"], :focus-visible).hovering > .pip-small,
+  .pip-wrapper.experiment:not([policy="hidden"], :focus-visible).hovering > .pip-expanded {
+    box-shadow: var(--pip-box-shadow-hover);
+  }
+  
+  /* Remove white box shadow if there is keyboard focus on the toggle and
+   * replace it with blue box shadow instead. */
+  .pip-wrapper.experiment:not([policy="hidden"]):focus-visible > .pip-small,
+  .pip-wrapper.experiment:not([policy="hidden"]):focus-visible > .pip-expanded {
+    box-shadow: 0 0 10px rgba(0, 96, 223, 0.9);
+  }
+
+  
+  /* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.w3.org/1999/xhtml");
+
+.videocontrols {
+  writing-mode: horizontal-tb;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+
+  direction: ltr;
+  /* Prevent selection from interacting weirdly with the page,
+   * see bug 1766093. Our text selection story with shadow dom should be
+   * better, see bug 1590379 */
+  user-select: none;
+  /* Prevent unwanted style inheritance. See bug 554717. */
+  text-align: left;
+  list-style-image: none !important;
+  font: normal normal normal 100%/normal sans-serif !important;
+  text-decoration: none !important;
+  white-space: normal !important;
+}
+
+.videocontrols[flipped="true"] {
+  transform: scaleX(-1);
+}
+
+.controlsContainer {
+  --clickToPlay-size: 48px;
+  --button-size: 30px;
+  --timer-size: 40px;
+  --timer-long-size: 60px;
+  --track-size: 5px;
+  --thumb-size: 13px;
+  --label-font-size: 13px;
+  --pip-toggle-padding: 5px;
+  --control-focus-outline: 2px solid #00DDFF;
+  --control-focus-outline-offset: -2px;
+  --pip-toggle-icon-width-height: 16px;
+  --pip-toggle-translate-x: calc(100% - var(--pip-toggle-icon-width-height) - 2 * var(--pip-toggle-padding));
+
+  color: #fff;
+}
+.controlsContainer.touch {
+  --clickToPlay-size: 64px;
+  --button-size: 40px;
+  --timer-size: 52px;
+  --timer-long-size: 78px;
+  --track-size: 7px;
+  --thumb-size: 16px;
+  --label-font-size: 16px;
+}
+
+/* Some CSS custom properties defined here are referenced by videocontrols.js */
+.controlBar {
+  /* Do not delete: these variables are accessed by JavaScript directly.
+     see videocontrols.js and search for |-width|. */
+  --clickToPlay-width: var(--clickToPlay-size);
+  --playButton-width: var(--button-size);
+  --scrubberStack-width: 64px;
+  --muteButton-width: var(--button-size);
+  --volumeStack-width: 48px;
+  --castingButton-width: var(--button-size);
+  --closedCaptionButton-width: var(--button-size);
+  --fullscreenButton-width: var(--button-size);
+  --positionDurationBox-width: var(--timer-size);
+  --durationSpan-width: var(--timer-size);
+  --positionDurationBox-width-long: var(--timer-long-size);
+  --durationSpan-width-long: var(--timer-long-size);
+}
+
+.touch .controlBar {
+  /* Do not delete: these variables are accessed by JavaScript directly.
+     see videocontrols.js and search for |-width|. */
+  --scrubberStack-width: 84px;
+  --volumeStack-width: 64px;
+}
+
+.controlsContainer [hidden],
+.controlBar[hidden] .progressBar,
+.controlBar[hidden] .bufferBar,
+.videocontrols[inDOMFullscreen] > .controlsContainer > .controlsOverlay > #pictureInPictureToggle {
+  display: none;
+}
+
+/* We hide the controlBar visually so it doesn't obscure the video. However,
+ * we still want to expose it to a11y so users who don't use a mouse can access
+ * it.
+ */
+.controlBar[hidden] {
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.controlBar[size="hidden"] {
+  display: none;
+}
+
+.controlsSpacer[hideCursor] {
+  cursor: none;
+}
+
+.controlsContainer,
+.progressContainer {
+  position: relative;
+  height: 100%;
+}
+
+.stackItem {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.statusOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(80,80,80, .85);
+}
+
+.controlsOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.controlsSpacerStack {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.controlBar {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 40px;
+  padding: 0 9px;
+  background-color: rgba(26,26,26,.8);
+}
+
+.touch .controlBar {
+  height: 52px;
+}
+
+.controlBar > .button {
+  /* Prevent #textTrackListContainer from blocking clicks on controls */
+  z-index: 1;
+  height: 100%;
+  min-width: var(--button-size);
+  min-height: var(--button-size);
+  padding: 6px;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-clip: content-box;
+  -moz-context-properties: fill;
+  fill: currentColor;
+  color: inherit;
+  /* We don't suppress ::-moz-focus-inner, so that does for a focus indicator */
+  outline: none;
+}
+
+/* Keyboard focus styling for interactive control elements (includes control
+   bar, click to play and track list) */
+.controlBar > .button:focus-visible,
+.volumeControl:focus-visible,
+.scrubber:focus-visible,
+.clickToPlay:focus-visible,
+.textTrackList > .textTrackItem:focus-visible {
+  outline: var(--control-focus-outline);
+  outline-offset: var(--control-focus-outline-offset);
+}
+
+.touch .controlBar > .button {
+  background-size: 24px 24px;
+}
+
+.controlBar > .button:enabled:hover {
+  fill: #48a0f7;
+}
+
+.controlBar > .button:enabled:hover:active {
+  fill: #2d89e6;
+}
+
+.playButton {
+  background-image: url(chrome://global/skin/media/pause-fill.svg);
+}
+.playButton[paused] {
+  background-image: url(chrome://global/skin/media/play-fill.svg);
+}
+
+.muteButton {
+  background-image: url(chrome://global/skin/media/audio.svg);
+}
+.muteButton[muted] {
+  background-image: url(chrome://global/skin/media/audio-muted.svg);
+}
+.muteButton[noAudio] {
+  background-image: url(chrome://global/skin/media/audioNoAudioButton.svg);
+}
+.muteButton[noAudio] + .volumeStack {
+  display: none;
+}
+
+.castingButton {
+  background-image: url(chrome://global/skin/media/castingButton-ready.svg);
+}
+
+.castingButton[enabled] {
+  background-image: url(chrome://global/skin/media/castingButton-active.svg);
+}
+
+.closedCaptionButton {
+  background-image: url(chrome://global/skin/media/closedCaptionButton-cc-off.svg);
+}
+.closedCaptionButton[enabled] {
+  background-image: url(chrome://global/skin/media/closedCaptionButton-cc-on.svg);
+}
+
+.fullscreenButton {
+  background-image: url(chrome://global/skin/media/fullscreenEnterButton.svg);
+}
+.fullscreenButton[fullscreened] {
+  background-image: url(chrome://global/skin/media/fullscreenExitButton.svg);
+}
+
+.controlBarSpacer {
+  flex-grow: 1;
+}
+
+.volumeControl::-moz-range-thumb,
+.scrubber::-moz-range-thumb {
+  height: var(--thumb-size);
+  width: var(--thumb-size);
+  border: none;
+  border-radius: 50%;
+  /* this is a foreground element even though it is implemented as a background */
+  background-color: currentColor;
+  filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.65));
+}
+
+.volumeControl,
+.scrubber {
+  outline: none;
+}
+
+.progressBackgroundBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressStack {
+  position: relative;
+  width: 100%;
+  height: var(--track-size);
+}
+
+.scrubberStack {
+  /* minus margin to get basis of required width */
+  min-width: calc(var(--scrubberStack-width) - 18px);
+  flex-basis: calc(var(--scrubberStack-width) - 18px);
+  flex-grow: 2;
+  flex-shrink: 0;
+  margin: 0 9px;
+}
+
+.volumeStack {
+  max-width: 60px;
+  min-width: var(--volumeStack-width);
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-right: 6px;
+  margin-left: 4px;
+}
+
+.bufferBar,
+.progressBar,
+.scrubber,
+.volumeControl {
+  bottom: 0;
+  color: inherit;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: calc(var(--track-size) / 2);
+  margin: 0;
+  background: none;
+  outline: none;
+}
+
+.bufferBar {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.bufferBar::-moz-progress-bar,
+.progressBar::-moz-progress-bar {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: calc(var(--track-size) / 2);
+  background: none;
+}
+
+.bufferBar::-moz-progress-bar {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: calc(var(--track-size) / 2);
+}
+
+.progressBar::-moz-progress-bar {
+  background-color: #00b6f0;
+}
+
+.scrubber:hover::-moz-range-thumb,
+.volumeControl:hover::-moz-range-thumb {
+  background-color: #48a0f7;
+}
+
+.scrubber:active::-moz-range-thumb,
+.volumeControl:active::-moz-range-thumb {
+  background-color: #2d89e6;
+}
+
+.scrubber::-moz-range-track,
+.scrubber::-moz-range-progress {
+  background-color: transparent;
+}
+
+.volumeControl::-moz-range-progress,
+.volumeControl::-moz-range-track {
+  height: var(--track-size);
+  border-radius: calc(var(--track-size) / 2);
+}
+
+.volumeControl::-moz-range-progress {
+  /* this is a foreground element even though it is implemented as a background */
+  background-color: currentColor;
+}
+
+.volumeControl::-moz-range-track {
+  background-color: rgba(0,0,0,0.7);
+}
+
+@media (prefers-contrast) {
+  /* Show a border in high contrast mode since background-colors
+     are not shown. */
+  .scrubber::-moz-range-track,
+  .volumeControl::-moz-range-track {
+    border: 1px solid;
+  }
+
+  .scrubber::-moz-range-progress,
+  .volumeControl::-moz-range-progress {
+    border: 2px solid;
+  }
+}
+
+.textTrackListContainer {
+  position: absolute;
+  right: 5px;
+  bottom: 45px;
+  top: 5px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.textTrackList {
+  flex: 0 1 auto;
+  border: 1px solid #000;
+  border-radius: 2.5px;
+  padding: 5px 0;
+  vertical-align: middle;
+  background-color: #000;
+  opacity: 0.7;
+  overflow-y: auto;
+}
+
+.touch .textTrackList {
+  bottom: 58px;
+}
+
+.textTrackList > .textTrackItem {
+  display: block;
+  width: 100%;
+  height: var(--button-size);
+  font-size: var(--label-font-size);
+  padding: 2px 10px;
+  border: none;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  color: inherit;
+}
+
+.textTrackList > .textTrackItem:hover {
+  background-color: #444;
+}
+
+.textTrackList > .textTrackItem[aria-checked="true"] {
+  color: #48a0f7;
+}
+
+.positionLabel,
+.durationLabel {
+  display: none;
+}
+
+.positionDurationBox {
+  text-align: center;
+  padding-inline-start: 1px;
+  padding-inline-end: 9px;
+  white-space: nowrap;
+  font: message-box;
+  font-size: var(--label-font-size);
+  font-size-adjust: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (-moz-platform: macos) {
+  .positionDurationBox {
+    font-size-adjust: unset;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  }
+}
+
+.duration {
+  display: inline-block;
+  white-space: pre;
+  color: #929292;
+}
+
+.statusIcon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 20px;
+}
+
+/* Not showing the throbber on mobile because of conflict with m.youtube.com (see bug 1289412) */
+.controlsContainer:not(.mobile) .statusIcon[type="throbber"] {
+  background: url(chrome://global/skin/media/throbber.png) no-repeat center;
+}
+
+.controlsContainer:not(.mobile) .statusIcon[type="throbber"][stalled] {
+  background: url(chrome://global/skin/media/stalled.png) no-repeat center;
+}
+
+.statusIcon[type="error"],
+.statusIcon[type="pictureInPicture"] {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.statusIcon[type="error"] {
+  min-width: 70px;
+  min-height: 60px;
+  background-image: url(chrome://global/skin/media/error.png);
+}
+
+.statusIcon[type="pictureInPicture"] {
+  min-width: 84px;
+  min-height: 84px;
+  background-image: url(chrome://global/skin/media/picture-in-picture-open.svg);
+  -moz-context-properties: fill;
+  fill: currentColor;
+}
+
+.videocontrols[localedir="rtl"] .statusIcon[type="pictureInPicture"] {
+  transform: scaleX(-1);
+}
+
+.pictureInPictureToggleLabel {
+  margin-inline-start: var(--pip-toggle-padding);
+}
+
+/* Overlay Play button */
+.clickToPlay {
+  appearance: none;
+  border: none;
+  min-width: var(--clickToPlay-size);
+  min-height: var(--clickToPlay-size);
+  border-radius: 50%;
+  background-image: url(chrome://global/skin/media/play-fill.svg);
+  background-repeat: no-repeat;
+  background-position: 54% 50%;
+  background-size: 40% 40%;
+  background-color: #1a1a1a;
+  -moz-context-properties: fill;
+  fill: currentColor;
+  color: inherit;
+  opacity: 0.8;
+  position: relative;
+  top: 20px;
+}
+
+.controlsSpacerStack:hover > .clickToPlay,
+.clickToPlay:hover {
+  opacity: 0.55;
+}
+
+.controlsSpacerStack:hover > .clickToPlay[fadeout] {
+  opacity: 0;
+}
+
+.controlBar[fullscreen-unavailable] .fullscreenButton {
+  display: none;
+}
+
+.statusOverlay[fadeout],
+.statusOverlay[error] + .controlsOverlay > .controlsSpacerStack {
+  opacity: 0;
+}
+
+.pictureInPictureOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  background-color: rgb(12, 12, 13);
+}
+
+/* Status description formatting */
+.statusLabel {
+  padding: 0 10px;
+  text-align: center;
+  font: message-box;
+  font-size: 14px;
+}
+
+.statusLabel {
+  display: none;
+}
+
+[status="errorAborted"]         > #errorAborted,
+[status="errorNetwork"]         > #errorNetwork,
+[status="errorDecode"]          > #errorDecode,
+[status="errorSrcNotSupported"] > #errorSrcNotSupported,
+[status="errorNoSource"]        > #errorNoSource,
+[status="errorGeneric"]         > #errorGeneric,
+[status="pictureInPicture"]     > #pictureInPicture {
+  display: inline;
+}
+
+@media (-moz-platform: windows) and (-moz-windows-default-theme: 0) {
+  .controlsSpacer,
+  .clickToPlay {
+    background-color: transparent;
+  }
+}
+
+.a11y-only {
+  position: absolute;
+  left: -10000px;
+  width: 100px;
+  height: 100px;
+}
